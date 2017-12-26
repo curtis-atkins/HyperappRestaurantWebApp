@@ -46,7 +46,12 @@
     "url": "git@github.com:curtis-atkins/HyperappRestaurantWebApp.git"
   },
   "keywords": [
-
+    "hyperapp"
   ],
-  "author": "Curtis Atkins",
-  "license": "N/A",
+  "author": "joe santos garcia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/codingphasedotcom/hyperapp-starterkit/issues"
+  },
+  "homepage": "https://github.com/codingphasedotcom/hyperapp-starterkit#readme"
+}
