@@ -110,43 +110,47 @@ function Header(_ref) {
     null,
     (0, _hyperapp.h)(
       "div",
-      { "class": "logo" },
+      { "class": "container" },
       (0, _hyperapp.h)(
-        "h1",
-        null,
-        "At Steak"
-      )
-    ),
-    (0, _hyperapp.h)(
-      "div",
-      { "class": "nav-menu" },
+        "div",
+        { "class": "logo" },
+        (0, _hyperapp.h)(
+          "h1",
+          null,
+          "Prime Beef"
+        )
+      ),
       (0, _hyperapp.h)(
-        "nav",
-        null,
+        "div",
+        { "class": "nav-menu" },
         (0, _hyperapp.h)(
-          "a",
-          { href: "#" },
-          "Home"
-        ),
-        (0, _hyperapp.h)(
-          "a",
-          { href: "#" },
-          "Party Platters"
-        ),
-        (0, _hyperapp.h)(
-          "a",
-          { href: "#" },
-          "Locations"
-        ),
-        (0, _hyperapp.h)(
-          "a",
-          { href: "#" },
-          "Rewards"
-        ),
-        (0, _hyperapp.h)(
-          "a",
-          { href: "#" },
-          "Reservations"
+          "nav",
+          null,
+          (0, _hyperapp.h)(
+            "a",
+            { href: "#" },
+            "Home"
+          ),
+          (0, _hyperapp.h)(
+            "a",
+            { href: "#" },
+            "Party Platters"
+          ),
+          (0, _hyperapp.h)(
+            "a",
+            { href: "#" },
+            "Locations"
+          ),
+          (0, _hyperapp.h)(
+            "a",
+            { href: "#" },
+            "Rewards"
+          ),
+          (0, _hyperapp.h)(
+            "a",
+            { href: "#" },
+            "Reservations"
+          )
         )
       )
     )
@@ -178,58 +182,62 @@ function TopImage(_ref) {
     { "class": "TopImage" },
     (0, _hyperapp.h)(
       "div",
-      { "class": "title" },
+      { "class": "container" },
       (0, _hyperapp.h)(
         "div",
-        { "class": "motto" },
-        (0, _hyperapp.h)(
-          "h5",
-          null,
-          "Welcome To "
-        ),
-        (0, _hyperapp.h)(
-          "h1",
-          null,
-          "Prime Beef Steak"
-        ),
-        (0, _hyperapp.h)(
-          "h1",
-          null,
-          "Restaurant"
-        )
-      ),
-      (0, _hyperapp.h)(
-        "div",
-        { "class": "details" },
+        { "class": "title" },
         (0, _hyperapp.h)(
           "div",
-          { "class": "contact-info" },
+          { "class": "motto" },
           (0, _hyperapp.h)(
             "h5",
             null,
-            "Book Table Directly:"
+            "Welcome To "
           ),
           (0, _hyperapp.h)(
-            "h3",
+            "h1",
             null,
-            "(919) 555-8004"
+            "Prime Beef Steak"
           ),
           (0, _hyperapp.h)(
-            "h5",
+            "h1",
             null,
-            "Opening Hours | ",
+            "Restaurant"
+          )
+        ),
+        (0, _hyperapp.h)(
+          "div",
+          { "class": "details" },
+          (0, _hyperapp.h)(
+            "div",
+            { "class": "contact-info" },
             (0, _hyperapp.h)(
-              "strong",
+              "h5",
               null,
-              "Monday-Friday: "
+              "Book Table Directly:"
             ),
-            " 11:30am-9:30pm / ",
             (0, _hyperapp.h)(
-              "strong",
+              "h3",
               null,
-              "Weekend: "
+              "(919) 555-8004"
             ),
-            " 11am - 11pm"
+            (0, _hyperapp.h)(
+              "h5",
+              null,
+              "Opening Hours | ",
+              (0, _hyperapp.h)(
+                "strong",
+                null,
+                "Monday-Friday: "
+              ),
+              " 11:30am-9:30pm / ",
+              (0, _hyperapp.h)(
+                "strong",
+                null,
+                "Weekend: "
+              ),
+              " 11am - 11pm"
+            )
           )
         )
       )
