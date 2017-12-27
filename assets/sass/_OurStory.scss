@@ -1,0 +1,58 @@
+
+#OurStory {
+  padding: 100px 0;
+  margin: 30px 50px;
+  h5 {
+    color: grey;
+    font-size: 1.1rem;
+    margin: 0.5rem 0 1rem;
+    letter-spacing: 20px;
+
+  }
+  h2 {
+    font-family: $displayFont;
+    font-size: 3rem;
+    margin: 0.5rem 0 3rem;
+    text-transform: capitalize;
+  }
+  p {
+    font-size: 1.1rem;
+    color: grey;
+    line-height: 1.8;
+    margin: 0.5rem 0 3rem;
+  }
+  .quote {
+    color: grey;
+    margin: 0.5rem 0 3rem;
+    strong{
+      color: black;
+      font-weight: 700;
+    }
+  }
+  .reserve-btn {
+    font-family: $displayFont;
+    padding: 20px 40px;
+    display: inline-block;
+    border: 1px solid black;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    transition: all 0.5s ease-in-out;
+    &:hover {
+      background: orange;
+      color: white;
+      transition: 0.3s ease-in-out;
+    }
+  }
+  .video-img {
+    max-width: 425px;
+    height: 500px;
+  //  background: linear-gradient(180deg,rgba(0,0,0,0.01) 0, #002d77 100%);
+    background-image: //linear-gradient(199deg,rgba(0,0,0,0.01) 0, #000 100%),
+      url(/img/chef.jpg);
+    background-position: center;
+    background-size: cover;
+    margin: 0 auto;
+  }
+}

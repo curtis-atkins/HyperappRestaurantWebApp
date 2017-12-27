@@ -4,7 +4,8 @@
 
 .container {
   width: 100%;
-  margin: 0 auto;
+  margin: 0 10px 0 50px;
+
 }
 
 .container:after,
@@ -15,8 +16,8 @@
 }
 
 .row {
-  margin-left: -15px;
-  margin-right: -15px;
+   margin-left: -15px;
+   margin-right: -15px;
 }
 
 [class*='col-'] {

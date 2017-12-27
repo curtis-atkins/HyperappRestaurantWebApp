@@ -10,10 +10,11 @@ export default function Header({state, actions}) {
         <div class="nav-menu">
           <nav>
             <a href="#">Home</a>
-            <a href="#">Party Platters</a>
-            <a href="#">Locations</a>
-            <a href="#">Rewards</a>
-            <a href="#">Reservations</a>
+            <a href="#">Our Story</a>
+            <a href="#">Special Menu</a>
+            <a href="#">Review</a>
+            <a href="#">Our News</a>
+            <a href="#">Contact Us</a>
           </nav>
         </div>
       </div>

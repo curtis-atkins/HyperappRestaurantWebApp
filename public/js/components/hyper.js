@@ -52,9 +52,13 @@ var _Header = __webpack_require__(13);
 
 var _Header2 = _interopRequireDefault(_Header);
 
-var _TopImage = __webpack_require__(14);
+var _TopImage = __webpack_require__(15);
 
 var _TopImage2 = _interopRequireDefault(_TopImage);
+
+var _OurStory = __webpack_require__(14);
+
+var _OurStory2 = _interopRequireDefault(_OurStory);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -66,7 +70,8 @@ function App(_ref) {
     "div",
     { "class": 'app' },
     (0, _hyperapp.h)(_Header2.default, { state: state, actions: actions }),
-    (0, _hyperapp.h)(_TopImage2.default, { state: state, actions: actions })
+    (0, _hyperapp.h)(_TopImage2.default, { state: state, actions: actions }),
+    (0, _hyperapp.h)(_OurStory2.default, { state: state, actions: actions })
   );
 }
 // <Header state={state} actions={actions}/>
@@ -134,22 +139,27 @@ function Header(_ref) {
           (0, _hyperapp.h)(
             "a",
             { href: "#" },
-            "Party Platters"
+            "Our Story"
           ),
           (0, _hyperapp.h)(
             "a",
             { href: "#" },
-            "Locations"
+            "Special Menu"
           ),
           (0, _hyperapp.h)(
             "a",
             { href: "#" },
-            "Rewards"
+            "Review"
           ),
           (0, _hyperapp.h)(
             "a",
             { href: "#" },
-            "Reservations"
+            "Our News"
+          ),
+          (0, _hyperapp.h)(
+            "a",
+            { href: "#" },
+            "Contact Us"
           )
         )
       )
@@ -169,6 +179,84 @@ function Header(_ref) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.default = OurStory;
+
+var _hyperapp = __webpack_require__(0);
+
+function OurStory(_ref) {
+  var state = _ref.state,
+      actions = _ref.actions;
+
+  return (0, _hyperapp.h)(
+    "section",
+    { id: "OurStory" },
+    (0, _hyperapp.h)(
+      "div",
+      { "class": "container" },
+      (0, _hyperapp.h)(
+        "div",
+        { "class": "row" },
+        (0, _hyperapp.h)(
+          "div",
+          { "class": "col-md-6" },
+          (0, _hyperapp.h)(
+            "h5",
+            { "class": "comp-title" },
+            "OUR STORY"
+          ),
+          (0, _hyperapp.h)(
+            "h2",
+            null,
+            "Cooking is the art of adjustment"
+          ),
+          (0, _hyperapp.h)(
+            "p",
+            null,
+            "Hammock shabby chic distillery schlitz, blog venmo retro brooklyn tousled gochujang air plant food truck. Kombucha hammock post-ironic selfies yuccie, keytar beard lomo."
+          ),
+          (0, _hyperapp.h)(
+            "div",
+            { "class": "quote" },
+            "\"The BEST steak in the entire Triangle area\" "
+          ),
+          (0, _hyperapp.h)(
+            "div",
+            { "class": "quote" },
+            (0, _hyperapp.h)(
+              "strong",
+              null,
+              "- Thomas Eggsy"
+            ),
+            " - Master Chef at Prime Steak"
+          ),
+          (0, _hyperapp.h)(
+            "a",
+            { href: "#", "class": "reserve-btn" },
+            "RESERVE"
+          )
+        ),
+        (0, _hyperapp.h)(
+          "div",
+          { "class": "col-md-6" },
+          (0, _hyperapp.h)("div", { "class": "video-img" })
+        )
+      )
+    )
+  );
+}
+// <Header state={state} actions={actions}/>
+// <Button state={state} actions={actions}/>
+
+/***/ }),
+/* 15 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 exports.default = TopImage;
 
 var _hyperapp = __webpack_require__(0);
@@ -179,64 +267,68 @@ function TopImage(_ref) {
 
   return (0, _hyperapp.h)(
     "section",
-    { "class": "TopImage" },
+    { id: "TopImage" },
     (0, _hyperapp.h)(
       "div",
-      { "class": "container" },
+      { "class": "overlay" },
       (0, _hyperapp.h)(
         "div",
-        { "class": "title" },
+        { "class": "container" },
         (0, _hyperapp.h)(
           "div",
-          { "class": "motto" },
-          (0, _hyperapp.h)(
-            "h5",
-            null,
-            "Welcome To "
-          ),
-          (0, _hyperapp.h)(
-            "h1",
-            null,
-            "Prime Beef Steak"
-          ),
-          (0, _hyperapp.h)(
-            "h1",
-            null,
-            "Restaurant"
-          )
-        ),
-        (0, _hyperapp.h)(
-          "div",
-          { "class": "details" },
+          { "class": "title" },
           (0, _hyperapp.h)(
             "div",
-            { "class": "contact-info" },
+            { "class": "motto" },
             (0, _hyperapp.h)(
               "h5",
               null,
-              "Book Table Directly:"
+              "Welcome"
             ),
             (0, _hyperapp.h)(
-              "h3",
+              "h1",
               null,
-              "(919) 555-8004"
+              "Prime Beef Steak"
             ),
             (0, _hyperapp.h)(
-              "h5",
+              "h1",
               null,
-              "Opening Hours | ",
+              "Restaurant"
+            )
+          ),
+          (0, _hyperapp.h)(
+            "div",
+            { "class": "details" },
+            (0, _hyperapp.h)(
+              "div",
+              { "class": "contact-info" },
               (0, _hyperapp.h)(
-                "strong",
+                "h5",
                 null,
-                "Monday-Friday: "
+                "Book Table Directly:"
               ),
-              " 11:30am-9:30pm / ",
               (0, _hyperapp.h)(
-                "strong",
+                "h3",
                 null,
-                "Weekend: "
+                "(919) 555-8004"
               ),
-              " 11am - 11pm"
+              (0, _hyperapp.h)(
+                "h5",
+                null,
+                "Opening Hours | ",
+                (0, _hyperapp.h)(
+                  "strong",
+                  null,
+                  "Monday-Friday: "
+                ),
+                " 11:30am-9:30pm / ",
+                (0, _hyperapp.h)(
+                  "strong",
+                  null,
+                  "Weekend: "
+                ),
+                " 11am - 11pm"
+              )
             )
           )
         )
@@ -248,7 +340,7 @@ function TopImage(_ref) {
 // <Button state={state} actions={actions}/>
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -295,4 +387,4 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 });
 
 /***/ })
-],[15]);
+],[16]);

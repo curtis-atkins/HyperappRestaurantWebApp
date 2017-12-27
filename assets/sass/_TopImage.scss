@@ -1,41 +1,46 @@
-section {
+
+  #TopImage{
+
   background: black;
   height: 645px;
   background-image: url("/img/PrimeRib2.jpg");
   background-size: cover;
   background-position: center;
-  .title {
+  .overlay{
+    background: rgba(0,0,0,0.26);
+    overflow: hidden;
+    height: 100%;
+    z-index: 2;
+    .title {
+    margin-right: 20px;
     .motto {
     padding: 200px 0;
     text-align: right;
-    margin-right: 30px;
       h1 {
         color: white;
         text-transform: uppercase;
         text-shadow: 2px 2px black;
-        font-weight: 300;
+        font-weight: 600;
         font-size: 4rem;
         font-family: $displayFont;
       }
       h5 {
         color: white;
         text-transform: uppercase;
-        font-weight: 300;
+        font-weight: 100;
         font-family: $textFont;
       }
     }
     .details{
       .contact-info{
+        padding-bottom: 5px;
         color: white;
         text-shadow: 1px 1px #000;
         text-align: right;
-        margin-right: 30px;
-        margin-bottom: 50px;
         font-family: $textFont;
         float: right;
-      //  display: inline-block;
         h5{
-          padding: 10px 0;
+          margin: 5px 0;
           strong{
             font-weight: bolder;
           }
@@ -46,5 +51,6 @@ section {
         }
       }
     }
+  }
   }
 }

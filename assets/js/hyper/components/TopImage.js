@@ -2,11 +2,12 @@ import {h, app} from 'hyperapp'
 
 export default function TopImage({state, actions}) {
   return (
-    <section class="TopImage">
+    <section id="TopImage">
+    <div class="overlay">
       <div class="container">
         <div class="title">
           <div class="motto">
-            <h5>Welcome To </h5>
+            <h5>Welcome</h5>
             <h1>Prime Beef Steak</h1>
               <h1>Restaurant</h1>
           </div>
@@ -19,6 +20,7 @@ export default function TopImage({state, actions}) {
           </div>
         </div>
       </div>
+    </div>
     </section>
   )
 }
