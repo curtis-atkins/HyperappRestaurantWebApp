@@ -1,0 +1,21 @@
+h2 {
+  font-family: $displayFont;
+  font-size: 3rem;
+  margin: 0.5rem 0 3rem;
+  text-transform: capitalize;
+}
+h5 {
+  color: #7D6262;
+  font-size: 0.9rem;
+  margin: 0.5rem 0 1rem;
+  letter-spacing: 20px;
+  text-transform: uppercase;
+  font-weight: 900;
+
+}
+p {
+  font-size: 1.1rem;
+  color: grey;
+  line-height: 1.8;
+  margin: 0.5rem 0 3rem;
+}

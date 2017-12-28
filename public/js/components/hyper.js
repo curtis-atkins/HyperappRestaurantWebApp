@@ -52,13 +52,17 @@ var _Header = __webpack_require__(13);
 
 var _Header2 = _interopRequireDefault(_Header);
 
-var _TopImage = __webpack_require__(15);
+var _TopImage = __webpack_require__(16);
 
 var _TopImage2 = _interopRequireDefault(_TopImage);
 
 var _OurStory = __webpack_require__(14);
 
 var _OurStory2 = _interopRequireDefault(_OurStory);
+
+var _SpecialMenu = __webpack_require__(15);
+
+var _SpecialMenu2 = _interopRequireDefault(_SpecialMenu);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -71,7 +75,8 @@ function App(_ref) {
     { "class": 'app' },
     (0, _hyperapp.h)(_Header2.default, { state: state, actions: actions }),
     (0, _hyperapp.h)(_TopImage2.default, { state: state, actions: actions }),
-    (0, _hyperapp.h)(_OurStory2.default, { state: state, actions: actions })
+    (0, _hyperapp.h)(_OurStory2.default, { state: state, actions: actions }),
+    (0, _hyperapp.h)(_SpecialMenu2.default, { state: state, actions: actions })
   );
 }
 // <Header state={state} actions={actions}/>
@@ -217,17 +222,12 @@ function OurStory(_ref) {
           (0, _hyperapp.h)(
             "div",
             { "class": "quote" },
-            "\"The BEST steak in the entire Triangle area\" "
-          ),
-          (0, _hyperapp.h)(
-            "div",
-            { "class": "quote" },
             (0, _hyperapp.h)(
               "strong",
               null,
-              "- Thomas Eggsy"
+              "- Warrick Dunn"
             ),
-            " - Master Chef at Prime Steak"
+            ", Master Chef at Prime Steak"
           ),
           (0, _hyperapp.h)(
             "a",
@@ -249,6 +249,143 @@ function OurStory(_ref) {
 
 /***/ }),
 /* 15 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = SpecialMenu;
+
+var _hyperapp = __webpack_require__(0);
+
+function SpecialMenu(_ref) {
+  var state = _ref.state,
+      actions = _ref.actions;
+
+  return (0, _hyperapp.h)(
+    "section",
+    { id: "SpecialMenu" },
+    (0, _hyperapp.h)(
+      "div",
+      { "class": "container" },
+      (0, _hyperapp.h)(
+        "h5",
+        { "class": "comp-title" },
+        "SPECIAL MENU"
+      ),
+      (0, _hyperapp.h)(
+        "h2",
+        null,
+        "Delicious Flavors Of Autumn"
+      ),
+      (0, _hyperapp.h)(
+        "div",
+        { "class": "row boxes" },
+        (0, _hyperapp.h)(
+          "div",
+          { "class": "col-md-4" },
+          (0, _hyperapp.h)(
+            "div",
+            { "class": "box" },
+            (0, _hyperapp.h)(
+              "div",
+              { "class": "box-img" },
+              (0, _hyperapp.h)(
+                "div",
+                {
+                  "class": "price" },
+                "$25"
+              )
+            ),
+            (0, _hyperapp.h)(
+              "span",
+              { "class": "dish" },
+              "Super BBQ Grill No Smoke"
+            ),
+            (0, _hyperapp.h)(
+              "p",
+              { "class": "ingredients" },
+              " Steak, Fried Eggs, Baked Potatoes, Vegetable Medley"
+            )
+          )
+        ),
+        (0, _hyperapp.h)(
+          "div",
+          { "class": "col-md-4" },
+          (0, _hyperapp.h)(
+            "div",
+            { "class": "box" },
+            (0, _hyperapp.h)(
+              "div",
+              { "class": "box-img" },
+              (0, _hyperapp.h)(
+                "div",
+                {
+                  "class": "price" },
+                "$42"
+              )
+            ),
+            (0, _hyperapp.h)(
+              "span",
+              { "class": "dish" },
+              "Queen Of Autumn"
+            ),
+            (0, _hyperapp.h)(
+              "p",
+              { "class": "ingredients" },
+              "Warm Chicken Wings, Portabello Mushrooms, Fresh Mozzarella"
+            )
+          )
+        ),
+        (0, _hyperapp.h)(
+          "div",
+          { "class": "col-md-4" },
+          (0, _hyperapp.h)(
+            "div",
+            { "class": "box" },
+            (0, _hyperapp.h)(
+              "div",
+              { "class": "box-img" },
+              (0, _hyperapp.h)(
+                "div",
+                {
+                  "class": "price" },
+                "$30"
+              )
+            ),
+            (0, _hyperapp.h)(
+              "span",
+              { "class": "dish" },
+              "Royal Liver Fried"
+            ),
+            (0, _hyperapp.h)(
+              "p",
+              { "class": "ingredients" },
+              "Grilled Beef Steak, Roasted Red Potatoes and Bell Peppers with Rosemary, Mushrooms, Famous Sauce, Tomatoes"
+            )
+          )
+        )
+      ),
+      (0, _hyperapp.h)(
+        "a",
+        { href: "#", "class": "view-menu" },
+        (0, _hyperapp.h)(
+          "strong",
+          null,
+          "View Full Menu"
+        )
+      )
+    )
+  );
+}
+// <Header state={state} actions={actions}/>
+// <Button state={state} actions={actions}/>
+
+/***/ }),
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -303,7 +440,7 @@ function TopImage(_ref) {
               "div",
               { "class": "contact-info" },
               (0, _hyperapp.h)(
-                "h5",
+                "h6",
                 null,
                 "Book Table Directly:"
               ),
@@ -313,7 +450,7 @@ function TopImage(_ref) {
                 "(919) 555-8004"
               ),
               (0, _hyperapp.h)(
-                "h5",
+                "h6",
                 null,
                 "Opening Hours | ",
                 (0, _hyperapp.h)(
@@ -340,7 +477,7 @@ function TopImage(_ref) {
 // <Button state={state} actions={actions}/>
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -387,4 +524,4 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 });
 
 /***/ })
-],[16]);
+],[17]);
