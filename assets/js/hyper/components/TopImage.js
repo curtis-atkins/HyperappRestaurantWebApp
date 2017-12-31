@@ -13,9 +13,11 @@ export default function TopImage({state, actions}) {
           </div>
           <div class="details">
             <div class="contact-info">
-              <h6>Book Table Directly:</h6>
-              <h3>(919) 555-8004</h3>
-              <h6>Opening Hours | <strong>Monday-Friday: </strong> 11:30am-9:30pm / <strong>Weekend: </strong> 11am - 11pm</h6>
+              <div class="container">
+                <h6>Book Table Directly:</h6>
+                <h3>(919) 555-8004</h3>
+                <h6>Opening Hours | <strong>Monday-Thursday: </strong> 11:30am-9:30pm || <strong>Weekend: </strong> 11am - 11pm</h6>
+              </div>
             </div>
           </div>
         </div>

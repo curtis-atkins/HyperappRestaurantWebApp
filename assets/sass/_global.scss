@@ -1,21 +1,38 @@
+body {
+  color: $black;
+}
+
 h2 {
   font-family: $displayFont;
   font-size: 3rem;
   margin: 0.5rem 0 3rem;
   text-transform: capitalize;
+  color: $black;
 }
+
 h5 {
-  color: #7D6262;
   font-size: 0.9rem;
   margin: 0.5rem 0 1rem;
   letter-spacing: 20px;
   text-transform: uppercase;
   font-weight: 900;
-
+  color: $red;
 }
+
 p {
-  font-size: 1.1rem;
-  color: grey;
-  line-height: 1.8;
+  font-size: 0.8rem;
+  font-weight: 200;
+  color: $paragraphColor;
+  line-height: 2;
   margin: 0.5rem 0 3rem;
+}
+
+strong {
+  font-weight: 600;
+}
+.textureBG {
+  background: $greyBG;
+  background-image: url(/img/GreyTexture.jpg);
+  background-position: center;
+  background-size: cover;
 }

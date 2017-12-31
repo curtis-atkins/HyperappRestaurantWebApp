@@ -6,13 +6,15 @@
   overflow: hidden;
   height: 100%;
   z-index: 2;
-  background-image: url(/img/GreyTexture.jpg);
-  background-position: center;
-  background-size: cover;
+  // background: $greyBG;
+  // background-image: url(/img/GreyTexture.jpg);
+  // background-position: center;
+  // background-size: cover;
   margin: 0 auto;
   h2,h5 {
     text-align: center;
   }
+
   a.view-menu {
     font-family: $displayFont;
     font-size: 1.5rem;
@@ -36,9 +38,7 @@
     .box-img {
       width: 100%;
       height: 200px;
-      background: linear-gradient(135deg,rgba(0,0,0,0.2) 0, #002d77 100%);
-      background-image: linear-gradient(135deg,rgba(0,0,0,0.2) 0, #002d77 100%),
-      url("/img/SteaknEggs.jpg");
+      background-image: url("/img/SteaknEggs.jpg");
       position: relative;
       margin-bottom: 70px;
       // img{

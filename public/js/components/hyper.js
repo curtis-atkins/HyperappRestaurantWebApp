@@ -48,21 +48,33 @@ exports.default = App;
 
 var _hyperapp = __webpack_require__(0);
 
-var _Header = __webpack_require__(13);
+var _Header = __webpack_require__(14);
 
 var _Header2 = _interopRequireDefault(_Header);
 
-var _TopImage = __webpack_require__(16);
+var _TopImage = __webpack_require__(19);
 
 var _TopImage2 = _interopRequireDefault(_TopImage);
 
-var _OurStory = __webpack_require__(14);
+var _OurStory = __webpack_require__(15);
 
 var _OurStory2 = _interopRequireDefault(_OurStory);
 
-var _SpecialMenu = __webpack_require__(15);
+var _SpecialMenu = __webpack_require__(18);
 
 var _SpecialMenu2 = _interopRequireDefault(_SpecialMenu);
+
+var _RandomQuote = __webpack_require__(16);
+
+var _RandomQuote2 = _interopRequireDefault(_RandomQuote);
+
+var _Reviews = __webpack_require__(17);
+
+var _Reviews2 = _interopRequireDefault(_Reviews);
+
+var _ContactUs = __webpack_require__(13);
+
+var _ContactUs2 = _interopRequireDefault(_ContactUs);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -76,7 +88,10 @@ function App(_ref) {
     (0, _hyperapp.h)(_Header2.default, { state: state, actions: actions }),
     (0, _hyperapp.h)(_TopImage2.default, { state: state, actions: actions }),
     (0, _hyperapp.h)(_OurStory2.default, { state: state, actions: actions }),
-    (0, _hyperapp.h)(_SpecialMenu2.default, { state: state, actions: actions })
+    (0, _hyperapp.h)(_SpecialMenu2.default, { state: state, actions: actions }),
+    (0, _hyperapp.h)(_RandomQuote2.default, { state: state, actions: actions }),
+    (0, _hyperapp.h)(_Reviews2.default, { state: state, actions: actions }),
+    (0, _hyperapp.h)(_ContactUs2.default, { state: state, actions: actions })
   );
 }
 // <Header state={state} actions={actions}/>
@@ -99,6 +114,129 @@ var globalState = exports.globalState = {
 /***/ }),
 /* 12 */,
 /* 13 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = ContactUs;
+
+var _hyperapp = __webpack_require__(0);
+
+function ContactUs(_ref) {
+  var state = _ref.state,
+      actions = _ref.actions;
+
+  return (0, _hyperapp.h)(
+    "section",
+    { id: "ContactUs" },
+    (0, _hyperapp.h)(
+      "div",
+      { "class": "container" },
+      (0, _hyperapp.h)(
+        "h5",
+        { "class": "comp-title" },
+        "CONTACT US"
+      ),
+      (0, _hyperapp.h)(
+        "h2",
+        null,
+        "Delivering Delicious Dining Daily"
+      ),
+      (0, _hyperapp.h)(
+        "div",
+        { "class": "box" },
+        (0, _hyperapp.h)(
+          "div",
+          { "class": "row" },
+          (0, _hyperapp.h)(
+            "div",
+            { "class": "col-md-6" },
+            (0, _hyperapp.h)(
+              "div",
+              { "class": "title" },
+              "Durham, North Carolina"
+            ),
+            (0, _hyperapp.h)(
+              "h6",
+              { "class": "address" },
+              "110  Parrish Street ",
+              (0, _hyperapp.h)("br", null),
+              "Durham, NC 27701"
+            ),
+            (0, _hyperapp.h)(
+              "p",
+              { "class": "email" },
+              (0, _hyperapp.h)(
+                "strong",
+                null,
+                "Email"
+              ),
+              ":",
+              (0, _hyperapp.h)(
+                "a",
+                { href: "mailto:info@primebeefsteak.com" },
+                " info@primebeefsteak.com"
+              )
+            )
+          ),
+          (0, _hyperapp.h)(
+            "div",
+            { "class": "col-md-6" },
+            (0, _hyperapp.h)(
+              "h6",
+              null,
+              "Phone:"
+            ),
+            (0, _hyperapp.h)(
+              "div",
+              { "class": "title" },
+              "(919) 555-8004"
+            ),
+            (0, _hyperapp.h)(
+              "h6",
+              null,
+              "Lunch Service:"
+            ),
+            (0, _hyperapp.h)(
+              "p",
+              null,
+              "Monday - Thursday:  11:30am - 4:30pm"
+            ),
+            (0, _hyperapp.h)(
+              "p",
+              null,
+              "Friday - Sunday:  11am - 4:30pm"
+            ),
+            (0, _hyperapp.h)(
+              "h6",
+              null,
+              "Dinner Service:"
+            ),
+            (0, _hyperapp.h)(
+              "p",
+              null,
+              "Monday -Thursday: 4:30pm - 9:30pm"
+            ),
+            (0, _hyperapp.h)(
+              "p",
+              null,
+              "Friday - Sunday:  4:30pm - 11pm"
+            )
+          )
+        )
+      )
+    )
+  );
+}
+// <Header state={state} actions={actions}/>
+// <Button state={state} actions={actions}/>
+
+/***/ }),
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -175,7 +313,7 @@ function Header(_ref) {
 // <Button state={state} actions={actions}/>
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -248,7 +386,132 @@ function OurStory(_ref) {
 // <Button state={state} actions={actions}/>
 
 /***/ }),
-/* 15 */
+/* 16 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = RandomQuote;
+
+var _hyperapp = __webpack_require__(0);
+
+function RandomQuote(_ref) {
+  var state = _ref.state,
+      actions = _ref.actions;
+
+  return (0, _hyperapp.h)(
+    "section",
+    { id: "RandomQuote" },
+    (0, _hyperapp.h)(
+      "div",
+      { "class": "container" },
+      (0, _hyperapp.h)(
+        "h1",
+        null,
+        "A well cooked steak is LOVE made visible"
+      ),
+      (0, _hyperapp.h)(
+        "span",
+        { "class": "author" },
+        "- Tiffany Derry, Co-Host on Spike's Hungry Investors"
+      )
+    )
+  );
+}
+// <Header state={state} actions={actions}/>
+// <Button state={state} actions={actions}/>
+
+/***/ }),
+/* 17 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = Reviews;
+
+var _hyperapp = __webpack_require__(0);
+
+function Reviews(_ref) {
+  var state = _ref.state,
+      actions = _ref.actions;
+
+  return (0, _hyperapp.h)(
+    "section",
+    { id: "Reviews" },
+    (0, _hyperapp.h)(
+      "div",
+      { "class": "container" },
+      (0, _hyperapp.h)(
+        "div",
+        { "class": "row" },
+        (0, _hyperapp.h)(
+          "div",
+          { "class": "col-md-8" },
+          (0, _hyperapp.h)("img", { "class": "chef-img", src: "/img/chef-roble2.jpg" })
+        ),
+        (0, _hyperapp.h)(
+          "div",
+          { "class": "col-md-4" },
+          (0, _hyperapp.h)(
+            "h5",
+            { "class": "comp-title" },
+            "REVIEWS"
+          ),
+          (0, _hyperapp.h)(
+            "h2",
+            null,
+            " The Food's Masters Say About Us"
+          ),
+          (0, _hyperapp.h)(
+            "div",
+            { "class": "quote" },
+            (0, _hyperapp.h)(
+              "strong",
+              null,
+              "\"Best restaurant that I used to experience!\""
+            )
+          ),
+          (0, _hyperapp.h)(
+            "p",
+            null,
+            "Hammock shabby chic distillery schlitz, blog venmo retro brooklyn tousled gochujang air plant food truck. Kombucha hammock post-ironic selfies yuccie, keytar beard lomo."
+          ),
+          (0, _hyperapp.h)(
+            "div",
+            { "class": "quote" },
+            (0, _hyperapp.h)(
+              "strong",
+              null,
+              "- Chef Robl\xE9 Ali"
+            ),
+            ",",
+            (0, _hyperapp.h)("br", null),
+            "Executive Chef at Robl\xE9 & Co., Streets, and regular contributor on ABC's \"The Chew\""
+          ),
+          (0, _hyperapp.h)(
+            "div",
+            { "class": "arrows" },
+            (0, _hyperapp.h)("i", { "class": "fa fa-arrow-left", "aria-hidden": "true" }),
+            (0, _hyperapp.h)("i", { "class": "fa fa-arrow-right ready", "aria-hidden": "true" })
+          )
+        )
+      )
+    )
+  );
+}
+// <Header state={state} actions={actions}/>
+// <Button state={state} actions={actions}/>
+
+/***/ }),
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -267,7 +530,7 @@ function SpecialMenu(_ref) {
 
   return (0, _hyperapp.h)(
     "section",
-    { id: "SpecialMenu" },
+    { id: "SpecialMenu", "class": "textureBG" },
     (0, _hyperapp.h)(
       "div",
       { "class": "container" },
@@ -385,7 +648,7 @@ function SpecialMenu(_ref) {
 // <Button state={state} actions={actions}/>
 
 /***/ }),
-/* 16 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -440,31 +703,35 @@ function TopImage(_ref) {
               "div",
               { "class": "contact-info" },
               (0, _hyperapp.h)(
-                "h6",
-                null,
-                "Book Table Directly:"
-              ),
-              (0, _hyperapp.h)(
-                "h3",
-                null,
-                "(919) 555-8004"
-              ),
-              (0, _hyperapp.h)(
-                "h6",
-                null,
-                "Opening Hours | ",
+                "div",
+                { "class": "container" },
                 (0, _hyperapp.h)(
-                  "strong",
+                  "h6",
                   null,
-                  "Monday-Friday: "
+                  "Book Table Directly:"
                 ),
-                " 11:30am-9:30pm / ",
                 (0, _hyperapp.h)(
-                  "strong",
+                  "h3",
                   null,
-                  "Weekend: "
+                  "(919) 555-8004"
                 ),
-                " 11am - 11pm"
+                (0, _hyperapp.h)(
+                  "h6",
+                  null,
+                  "Opening Hours | ",
+                  (0, _hyperapp.h)(
+                    "strong",
+                    null,
+                    "Monday-Thursday: "
+                  ),
+                  " 11:30am-9:30pm || ",
+                  (0, _hyperapp.h)(
+                    "strong",
+                    null,
+                    "Weekend: "
+                  ),
+                  " 11am - 11pm"
+                )
               )
             )
           )
@@ -477,7 +744,7 @@ function TopImage(_ref) {
 // <Button state={state} actions={actions}/>
 
 /***/ }),
-/* 17 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -524,4 +791,4 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 });
 
 /***/ })
-],[17]);
+],[20]);

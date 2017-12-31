@@ -1,0 +1,28 @@
+
+#RandomQuote {
+  color: red;
+  padding: 240px 0;
+  height: 500px;
+  background-image: url(/img/AssortedSteak.jpg);
+  background-position: right;
+  background-size: cover;
+  h1 {
+    color: white;
+    font-family: $displayFont;
+    font-size: 2.7rem;
+    text-transform: capitalize;
+    text-align: center;
+    margin: 0 auto 50px;
+    max-width: 600px;
+    line-height: 1.3;
+  }
+  span {
+    color: white;
+    font-family: $textFont;
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-transform: capitalize;
+    text-align: center;
+    display: block;
+  }
+}
