@@ -13,7 +13,7 @@ export default function Header({state, actions}) {
             <a href="#">Our Story</a>
             <a href="#">Special Menu</a>
             <a href="#">Review</a>
-            <a href="#">Our News</a>
+            <a href="#">Reservations</a>
             <a href="#">Contact Us</a>
           </nav>
         </div>
