@@ -11,15 +11,15 @@ export default function ContactUs({state, actions}) {
           <div class="row">
             <div class="col-md-6">
               <div class="title">
-                Durham, North Carolina
+                {state.companyInfo.region}
               </div>
               <h6 class="address">
-                110  Parrish Street <br/>
-                Durham, NC 27701
+                {state.companyInfo.address1} <br/>
+                {state.companyInfo.address2}
               </h6>
               <p class="email">
                 <strong>Email</strong>:
-                <a href="mailto:info@primebeefsteak.com"> info@primebeefsteak.com</a>
+                <a href="mailto:info@primebeefsteak.com"> {state.companyInfo.email}</a>
               </p>
             </div>
             <div class="col-md-6">
@@ -27,7 +27,7 @@ export default function ContactUs({state, actions}) {
                 Phone:
               </h6>
               <div class="title">
-                (919) 555-8004
+                {state.companyInfo.phone}
               </div>
               <h6>
                 Lunch Service:
@@ -38,7 +38,7 @@ export default function ContactUs({state, actions}) {
               <p>
                 Friday - Sunday:  11am - 4:30pm
               </p>
-              
+
               <h6>
                 Dinner Service:
               </h6>

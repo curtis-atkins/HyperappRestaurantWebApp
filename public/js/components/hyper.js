@@ -112,8 +112,33 @@ function App(_ref) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+var companyInfo = {
+  title: "PRIME BEEF STEAK",
+  phone: "919 - 555 - 8004",
+  region: "Durham, North Carolina",
+  address1: "110 Parrish Street",
+  address2: "Durham, NC 27701",
+  email: "info@primebeefsteak.com"
+};
+
+var specialMenuData = [{
+  title: "Super BBQ Grill No Smoke",
+  ingredients: "Steak, Fried Eggs, Baked Potatoes, Vegetable Medley",
+  price: "$25"
+}, {
+  title: "Queen Of Autumn",
+  ingredients: "Warm Chicken Wings, Portabello Mushrooms, Fresh Mozzarella",
+  price: "$42"
+}, {
+  title: "Royal Liver Fried",
+  ingredients: "Grilled Beef Steak, Roasted Red Potatoes and Bell Peppers with Rosemary, Mushrooms, Famous Sauce, Tomatoes",
+  price: "$30"
+}];
+
 var globalState = exports.globalState = {
-  count: 0
+  count: 0,
+  companyInfo: companyInfo,
+  specialMenuData: specialMenuData
 };
 
 /***/ }),
@@ -163,14 +188,15 @@ function ContactUs(_ref) {
             (0, _hyperapp.h)(
               "div",
               { "class": "title" },
-              "Durham, North Carolina"
+              state.companyInfo.region
             ),
             (0, _hyperapp.h)(
               "h6",
               { "class": "address" },
-              "110  Parrish Street ",
+              state.companyInfo.address1,
+              " ",
               (0, _hyperapp.h)("br", null),
-              "Durham, NC 27701"
+              state.companyInfo.address2
             ),
             (0, _hyperapp.h)(
               "p",
@@ -184,7 +210,8 @@ function ContactUs(_ref) {
               (0, _hyperapp.h)(
                 "a",
                 { href: "mailto:info@primebeefsteak.com" },
-                " info@primebeefsteak.com"
+                " ",
+                state.companyInfo.email
               )
             )
           ),
@@ -199,7 +226,7 @@ function ContactUs(_ref) {
             (0, _hyperapp.h)(
               "div",
               { "class": "title" },
-              "(919) 555-8004"
+              state.companyInfo.phone
             ),
             (0, _hyperapp.h)(
               "h6",
@@ -688,6 +715,42 @@ function SpecialMenu(_ref) {
   var state = _ref.state,
       actions = _ref.actions;
 
+
+  var loopSpecialMenu = function loopSpecialMenu() {
+    return state.specialMenuData.map(function (item) {
+      console.log(item.title);
+      return (0, _hyperapp.h)(
+        "div",
+        { "class": "col-md-4" },
+        (0, _hyperapp.h)(
+          "div",
+          { "class": "box" },
+          (0, _hyperapp.h)(
+            "div",
+            { "class": "box-img" },
+            (0, _hyperapp.h)(
+              "div",
+              {
+                "class": "price" },
+              item.price
+            )
+          ),
+          (0, _hyperapp.h)(
+            "span",
+            { "class": "dish" },
+            item.title
+          ),
+          (0, _hyperapp.h)(
+            "p",
+            { "class": "ingredients" },
+            " ",
+            item.ingredients
+          )
+        )
+      );
+    });
+  };
+
   return (0, _hyperapp.h)(
     "section",
     { id: "SpecialMenu", "class": "textureBG" },
@@ -707,90 +770,7 @@ function SpecialMenu(_ref) {
       (0, _hyperapp.h)(
         "div",
         { "class": "row boxes" },
-        (0, _hyperapp.h)(
-          "div",
-          { "class": "col-md-4" },
-          (0, _hyperapp.h)(
-            "div",
-            { "class": "box" },
-            (0, _hyperapp.h)(
-              "div",
-              { "class": "box-img" },
-              (0, _hyperapp.h)(
-                "div",
-                {
-                  "class": "price" },
-                "$25"
-              )
-            ),
-            (0, _hyperapp.h)(
-              "span",
-              { "class": "dish" },
-              "Super BBQ Grill No Smoke"
-            ),
-            (0, _hyperapp.h)(
-              "p",
-              { "class": "ingredients" },
-              " Steak, Fried Eggs, Baked Potatoes, Vegetable Medley"
-            )
-          )
-        ),
-        (0, _hyperapp.h)(
-          "div",
-          { "class": "col-md-4" },
-          (0, _hyperapp.h)(
-            "div",
-            { "class": "box" },
-            (0, _hyperapp.h)(
-              "div",
-              { "class": "box-img" },
-              (0, _hyperapp.h)(
-                "div",
-                {
-                  "class": "price" },
-                "$42"
-              )
-            ),
-            (0, _hyperapp.h)(
-              "span",
-              { "class": "dish" },
-              "Queen Of Autumn"
-            ),
-            (0, _hyperapp.h)(
-              "p",
-              { "class": "ingredients" },
-              "Warm Chicken Wings, Portabello Mushrooms, Fresh Mozzarella"
-            )
-          )
-        ),
-        (0, _hyperapp.h)(
-          "div",
-          { "class": "col-md-4" },
-          (0, _hyperapp.h)(
-            "div",
-            { "class": "box" },
-            (0, _hyperapp.h)(
-              "div",
-              { "class": "box-img" },
-              (0, _hyperapp.h)(
-                "div",
-                {
-                  "class": "price" },
-                "$30"
-              )
-            ),
-            (0, _hyperapp.h)(
-              "span",
-              { "class": "dish" },
-              "Royal Liver Fried"
-            ),
-            (0, _hyperapp.h)(
-              "p",
-              { "class": "ingredients" },
-              "Grilled Beef Steak, Roasted Red Potatoes and Bell Peppers with Rosemary, Mushrooms, Famous Sauce, Tomatoes"
-            )
-          )
-        )
+        loopSpecialMenu()
       ),
       (0, _hyperapp.h)(
         "a",
@@ -848,7 +828,7 @@ function TopImage(_ref) {
             (0, _hyperapp.h)(
               "h1",
               null,
-              "Prime Beef Steak"
+              state.companyInfo.title
             ),
             (0, _hyperapp.h)(
               "h1",
@@ -873,7 +853,7 @@ function TopImage(_ref) {
                 (0, _hyperapp.h)(
                   "h3",
                   null,
-                  "(919) 555-8004"
+                  state.companyInfo.phone
                 ),
                 (0, _hyperapp.h)(
                   "h6",
@@ -927,7 +907,7 @@ var _App2 = _interopRequireDefault(_App);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (0, _hyperapp.app)({
-  state: { globalState: _globalState.globalState },
+  state: _globalState.globalState,
   view: function view(state, actions) {
     return (0, _hyperapp.h)(_App2.default, { state: state, actions: actions });
   },
