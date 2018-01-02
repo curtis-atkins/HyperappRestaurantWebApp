@@ -11,15 +11,15 @@ export default function ContactUs({state, actions}) {
           <div class="row">
             <div class="col-md-6">
               <div class="title">
-                {state.companyInfo.region}
+                {state.companyInfoData.region}
               </div>
               <h6 class="address">
-                {state.companyInfo.address1} <br/>
-                {state.companyInfo.address2}
+                {state.companyInfoData.address1} <br/>
+              {state.companyInfoData.address2}
               </h6>
               <p class="email">
                 <strong>Email</strong>:
-                <a href="mailto:info@primebeefsteak.com"> {state.companyInfo.email}</a>
+                <a href="mailto:info@primebeefsteak.com"> {state.companyInfoData.email}</a>
               </p>
             </div>
             <div class="col-md-6">
@@ -27,7 +27,7 @@ export default function ContactUs({state, actions}) {
                 Phone:
               </h6>
               <div class="title">
-                {state.companyInfo.phone}
+                {state.companyInfoData.phone}
               </div>
               <h6>
                 Lunch Service:

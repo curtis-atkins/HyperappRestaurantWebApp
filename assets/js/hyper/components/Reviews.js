@@ -1,22 +1,38 @@
 import {h, app} from 'hyperapp'
 
 export default function Reviews({state, actions}) {
+  const loopReviews = () => {
+    return(
+      <div>
+        <h2>{state.reviewsData[state.reviewStatus.currentReview].company}</h2>
+        <div class="quote"><strong>{state.reviewsData[state.reviewStatus.currentReview].highlight}</strong></div>
+        <p>{state.reviewsData[state.reviewStatus.currentReview].review}</p>
+        <div class="quote"><strong>{state.reviewsData[state.reviewStatus.currentReview].author}</strong>,<br/>{state.reviewsData[state.reviewStatus.currentReview].credits}
+        </div>
+      </div>
+    )
+  }
+
+  const loopReviewImages = () => {
+    return (
+      <div>
+        <img class="chef-img" src={state.reviewsData[state.reviewStatus.currentReview].photo}/>
+      </div>
+    )
+  }
+
+
   return (
     <section id="Reviews">
       <div class="container">
         <div class="row">
           <div class="col-md-8">
-              <img class="chef-img" src="/img/chef-roble2.jpg"/>
+            {loopReviewImages()}
           </div>
-
           <div class= "col-md-4">
             <h5 class="comp-title">REVIEWS</h5>
-            <h2> The Food's Masters Say About Us</h2>
-            <div class="quote"><strong>"Best restaurant that I used to experience!"</strong></div>
-            <p>Hammock shabby chic distillery schlitz, blog venmo retro brooklyn tousled gochujang air plant food
-              truck. Kombucha hammock post-ironic selfies yuccie, keytar beard lomo.
-            </p>
-            <div class="quote"><strong>- Chef Robl&eacute; Ali</strong>,<br/>Executive Chef at Robl&eacute;	& Co., Streets, and regular contributor on ABC's "The Chew"</div>
+
+            {loopReviews()}
             <div class="arrows">
               <i class="fa fa-arrow-left" aria-hidden="true"></i>
               <i class="fa fa-arrow-right ready" aria-hidden="true"></i>

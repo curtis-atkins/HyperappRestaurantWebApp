@@ -112,7 +112,7 @@ function App(_ref) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var companyInfo = {
+var companyInfoData = {
   title: "PRIME BEEF STEAK",
   phone: "919 - 555 - 8004",
   region: "Durham, North Carolina",
@@ -135,10 +135,69 @@ var specialMenuData = [{
   price: "$30"
 }];
 
+var reviewsData = [{
+  company: "Bravo TV",
+  author: "- Chef Roblé Ali",
+  photo: "\"/img/chef-roble2.jpg\"",
+  credits: "Executive Chef at Roblé & Co., Streets, and regular contributor on ABC's \"The Chew\"",
+  highlight: "Best steak experience in North Carolina!",
+  review: "Hammock shabby chic distillery schlitz, blog venmo retro brooklyn tousled gochujang air plant food truck. Kombucha hammock post-ironic selfies yuccie, keytar beard lomo."
+}, {
+  company: "The Food Network",
+  author: "- Rachael Ray",
+  photo: "/img/rachael-Ray.jpg",
+  credits: "The Rachael Ray Show, 30 Minute Meals, Rachael vs. Guy: Celebrity Cook-Off",
+  highlight: "Fine dining with a healthy dose of southern hospitality!",
+  review: "Hammock shabby chic distillery schlitz, blog venmo retro brooklyn tousled gochujang air plant food truck. Kombucha hammock post-ironic selfies yuccie, keytar beard lomo."
+}, {
+  company: "ABC",
+  author: "- Chef Marcus Samuelsson",
+  photo: "/img/marcus-samuelsson.jpg",
+  credits: "The Taste, Chopped, Iron Chef America",
+  highlight: "This place is where cuisine and culture collide!",
+  review: "Hammock shabby chic distillery schlitz, blog venmo retro brooklyn tousled gochujang air plant food truck. Kombucha hammock post-ironic selfies yuccie, keytar beard lomo."
+}, {
+  company: "Viceland",
+  author: "- Cat Cora",
+  photo: "/img/cat-cora.jpg",
+  credits: "Iron Chef USA, Cat Cora Enterprises",
+  highlight: "One of the best steakhouses in the South!",
+  review: "Hammock shabby chic distillery schlitz, blog venmo retro brooklyn tousled gochujang air plant food truck. Kombucha hammock post-ironic selfies yuccie, keytar beard lomo."
+}, {
+  company: "TV Guide Channel",
+  author: "- Jamie Oliver",
+  photo: "/img/jamie-oliver.jpg",
+  credits: "Jamie's 15 Minute Meals, Save With Jamie, Jamie Does...",
+  highlight: "Best steak experience in North Carolina!",
+  review: "Hammock shabby chic distillery schlitz, blog venmo retro brooklyn tousled gochujang air plant food truck. Kombucha hammock post-ironic selfies yuccie, keytar beard lomo."
+}];
+
+var randomQuoteData = [{
+  author: "-Hippocrates",
+  quote: "Let Food Be Thy Medicine And Medicine Be Thy Food"
+}, {
+  author: "-Tiffany Derry",
+  quote: "A Well Cooked Steak Is LOVE Made Edible"
+}, {
+  author: "-Ina Garten",
+  quote: "Cooking Is One Of The Great Gifts You Can Give To Those You Love"
+}, {
+  author: "-Julia Child",
+  quote: "People Who Love To Eat Are Always The Best People"
+}, {
+  author: "-James Beard",
+  quote: "Food Is Our Common Ground, A Universal Experience"
+}];
+
 var globalState = exports.globalState = {
   count: 0,
-  companyInfo: companyInfo,
-  specialMenuData: specialMenuData
+  companyInfoData: companyInfoData,
+  specialMenuData: specialMenuData,
+  reviewsData: reviewsData,
+  randomQuoteData: randomQuoteData,
+  reviewStatus: {
+    currentReview: 0
+  }
 };
 
 /***/ }),
@@ -188,15 +247,15 @@ function ContactUs(_ref) {
             (0, _hyperapp.h)(
               "div",
               { "class": "title" },
-              state.companyInfo.region
+              state.companyInfoData.region
             ),
             (0, _hyperapp.h)(
               "h6",
               { "class": "address" },
-              state.companyInfo.address1,
+              state.companyInfoData.address1,
               " ",
               (0, _hyperapp.h)("br", null),
-              state.companyInfo.address2
+              state.companyInfoData.address2
             ),
             (0, _hyperapp.h)(
               "p",
@@ -211,7 +270,7 @@ function ContactUs(_ref) {
                 "a",
                 { href: "mailto:info@primebeefsteak.com" },
                 " ",
-                state.companyInfo.email
+                state.companyInfoData.email
               )
             )
           ),
@@ -226,7 +285,7 @@ function ContactUs(_ref) {
             (0, _hyperapp.h)(
               "div",
               { "class": "title" },
-              state.companyInfo.phone
+              state.companyInfoData.phone
             ),
             (0, _hyperapp.h)(
               "h6",
@@ -630,6 +689,52 @@ function Reviews(_ref) {
   var state = _ref.state,
       actions = _ref.actions;
 
+  var loopReviews = function loopReviews() {
+    return (0, _hyperapp.h)(
+      "div",
+      null,
+      (0, _hyperapp.h)(
+        "h2",
+        null,
+        state.reviewsData[state.reviewStatus.currentReview].company
+      ),
+      (0, _hyperapp.h)(
+        "div",
+        { "class": "quote" },
+        (0, _hyperapp.h)(
+          "strong",
+          null,
+          state.reviewsData[state.reviewStatus.currentReview].highlight
+        )
+      ),
+      (0, _hyperapp.h)(
+        "p",
+        null,
+        state.reviewsData[state.reviewStatus.currentReview].review
+      ),
+      (0, _hyperapp.h)(
+        "div",
+        { "class": "quote" },
+        (0, _hyperapp.h)(
+          "strong",
+          null,
+          state.reviewsData[state.reviewStatus.currentReview].author
+        ),
+        ",",
+        (0, _hyperapp.h)("br", null),
+        state.reviewsData[state.reviewStatus.currentReview].credits
+      )
+    );
+  };
+
+  var loopReviewImages = function loopReviewImages() {
+    return (0, _hyperapp.h)(
+      "div",
+      null,
+      (0, _hyperapp.h)("img", { "class": "chef-img", src: state.reviewsData[state.reviewStatus.currentReview].photo })
+    );
+  };
+
   return (0, _hyperapp.h)(
     "section",
     { id: "Reviews" },
@@ -642,7 +747,7 @@ function Reviews(_ref) {
         (0, _hyperapp.h)(
           "div",
           { "class": "col-md-8" },
-          (0, _hyperapp.h)("img", { "class": "chef-img", src: "/img/chef-roble2.jpg" })
+          loopReviewImages()
         ),
         (0, _hyperapp.h)(
           "div",
@@ -652,37 +757,7 @@ function Reviews(_ref) {
             { "class": "comp-title" },
             "REVIEWS"
           ),
-          (0, _hyperapp.h)(
-            "h2",
-            null,
-            " The Food's Masters Say About Us"
-          ),
-          (0, _hyperapp.h)(
-            "div",
-            { "class": "quote" },
-            (0, _hyperapp.h)(
-              "strong",
-              null,
-              "\"Best restaurant that I used to experience!\""
-            )
-          ),
-          (0, _hyperapp.h)(
-            "p",
-            null,
-            "Hammock shabby chic distillery schlitz, blog venmo retro brooklyn tousled gochujang air plant food truck. Kombucha hammock post-ironic selfies yuccie, keytar beard lomo."
-          ),
-          (0, _hyperapp.h)(
-            "div",
-            { "class": "quote" },
-            (0, _hyperapp.h)(
-              "strong",
-              null,
-              "- Chef Robl\xE9 Ali"
-            ),
-            ",",
-            (0, _hyperapp.h)("br", null),
-            "Executive Chef at Robl\xE9 & Co., Streets, and regular contributor on ABC's \"The Chew\""
-          ),
+          loopReviews(),
           (0, _hyperapp.h)(
             "div",
             { "class": "arrows" },
@@ -828,7 +903,7 @@ function TopImage(_ref) {
             (0, _hyperapp.h)(
               "h1",
               null,
-              state.companyInfo.title
+              state.companyInfoData.title
             ),
             (0, _hyperapp.h)(
               "h1",
@@ -853,7 +928,7 @@ function TopImage(_ref) {
                 (0, _hyperapp.h)(
                   "h3",
                   null,
-                  state.companyInfo.phone
+                  state.companyInfoData.phone
                 ),
                 (0, _hyperapp.h)(
                   "h6",
