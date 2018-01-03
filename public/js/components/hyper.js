@@ -17,22 +17,26 @@ webpackJsonp([0],[
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var actions = exports.actions = {
-  up: up,
-  intro: intro,
-  showMenu: showMenu
+var reviewLeftClicked = function reviewLeftClicked(state, actions) {
+  return {
+    reviewStatus: {
+      currentReview: state.reviewStatus.currentReview - 1
+    }
+  };
 };
 
-function up(state, actions) {
-  return { count: state.count + 1 };
-}
+var reviewRightClicked = function reviewRightClicked(state, actions) {
+  return {
+    reviewStatus: {
+      currentReview: state.reviewStatus.currentReview + 1
+    }
+  };
+};
 
-function showMenu() {}
-
-function intro(state, actions) {
-  console.log('Just ran my first action');
-  return { count: state.count + 1 };
-}
+var actions = exports.actions = {
+  reviewLeftClicked: reviewLeftClicked,
+  reviewRightClicked: reviewRightClicked
+};
 
 /***/ }),
 /* 10 */
@@ -138,35 +142,35 @@ var specialMenuData = [{
 var reviewsData = [{
   company: "Bravo TV",
   author: "- Chef Roblé Ali",
-  photo: "\"/img/chef-roble2.jpg\"",
+  photo: "chef-roble2.jpg",
   credits: "Executive Chef at Roblé & Co., Streets, and regular contributor on ABC's \"The Chew\"",
   highlight: "Best steak experience in North Carolina!",
   review: "Hammock shabby chic distillery schlitz, blog venmo retro brooklyn tousled gochujang air plant food truck. Kombucha hammock post-ironic selfies yuccie, keytar beard lomo."
 }, {
   company: "The Food Network",
   author: "- Rachael Ray",
-  photo: "/img/rachael-Ray.jpg",
+  photo: "rachael-Ray.jpg",
   credits: "The Rachael Ray Show, 30 Minute Meals, Rachael vs. Guy: Celebrity Cook-Off",
   highlight: "Fine dining with a healthy dose of southern hospitality!",
   review: "Hammock shabby chic distillery schlitz, blog venmo retro brooklyn tousled gochujang air plant food truck. Kombucha hammock post-ironic selfies yuccie, keytar beard lomo."
 }, {
   company: "ABC",
   author: "- Chef Marcus Samuelsson",
-  photo: "/img/marcus-samuelsson.jpg",
+  photo: "marcus-samuelsson.jpg",
   credits: "The Taste, Chopped, Iron Chef America",
   highlight: "This place is where cuisine and culture collide!",
   review: "Hammock shabby chic distillery schlitz, blog venmo retro brooklyn tousled gochujang air plant food truck. Kombucha hammock post-ironic selfies yuccie, keytar beard lomo."
 }, {
   company: "Viceland",
   author: "- Cat Cora",
-  photo: "/img/cat-cora.jpg",
+  photo: "cat-cora.jpg",
   credits: "Iron Chef USA, Cat Cora Enterprises",
   highlight: "One of the best steakhouses in the South!",
   review: "Hammock shabby chic distillery schlitz, blog venmo retro brooklyn tousled gochujang air plant food truck. Kombucha hammock post-ironic selfies yuccie, keytar beard lomo."
 }, {
   company: "TV Guide Channel",
   author: "- Jamie Oliver",
-  photo: "/img/jamie-oliver.jpg",
+  photo: "jamie-oliver.jpg",
   credits: "Jamie's 15 Minute Meals, Save With Jamie, Jamie Does...",
   highlight: "Best steak experience in North Carolina!",
   review: "Hammock shabby chic distillery schlitz, blog venmo retro brooklyn tousled gochujang air plant food truck. Kombucha hammock post-ironic selfies yuccie, keytar beard lomo."
@@ -731,8 +735,20 @@ function Reviews(_ref) {
     return (0, _hyperapp.h)(
       "div",
       null,
-      (0, _hyperapp.h)("img", { "class": "chef-img", src: state.reviewsData[state.reviewStatus.currentReview].photo })
+      (0, _hyperapp.h)("img", { "class": "chef-img", src: "/img/" + state.reviewsData[state.reviewStatus.currentReview].photo })
     );
+  };
+
+  var leftClickBtn = function leftClickBtn() {
+    if (state.reviewStatus.currentReview > 0) {
+      actions.reviewLeftClicked();
+    }
+  };
+
+  var rightClickBtn = function rightClickBtn() {
+    if (state.reviewStatus.currentReview < state.reviewsData.length - 1) {
+      actions.reviewRightClicked();
+    }
   };
 
   return (0, _hyperapp.h)(
@@ -761,8 +777,10 @@ function Reviews(_ref) {
           (0, _hyperapp.h)(
             "div",
             { "class": "arrows" },
-            (0, _hyperapp.h)("i", { "class": "fa fa-arrow-left", "aria-hidden": "true" }),
-            (0, _hyperapp.h)("i", { "class": "fa fa-arrow-right ready", "aria-hidden": "true" })
+            (0, _hyperapp.h)("i", { onclick: leftClickBtn,
+              "class": "fa fa-arrow-left " + (state.reviewStatus.currentReview > 0 ? 'ready' : ''), "aria-hidden": "true" }),
+            (0, _hyperapp.h)("i", { onclick: rightClickBtn,
+              "class": "fa fa-arrow-right " + (state.reviewStatus.currentReview < state.reviewsData.length - 1 ? 'ready' : ''), "aria-hidden": "true" })
           )
         )
       )
@@ -997,9 +1015,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
       console.log("Name:", name);
       console.log("Data:", data);
       console.groupEnd();
-    },
-    load: function load(state, actions) {
-      actions.intro();
     }
   },
   mixins: [(0, _hyperappReduxDevtools2.default)()]

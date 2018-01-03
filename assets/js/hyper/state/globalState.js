@@ -29,7 +29,7 @@ const reviewsData = [
   {
     company: "Bravo TV",
     author: "- Chef Roblé Ali",
-    photo: "\"/img/chef-roble2.jpg\"",
+    photo: "chef-roble2.jpg",
     credits: "Executive Chef at Roblé & Co., Streets, and regular contributor on ABC's \"The Chew\"",
     highlight: "Best steak experience in North Carolina!",
     review: "Hammock shabby chic distillery schlitz, blog venmo retro brooklyn tousled gochujang air plant food truck. Kombucha hammock post-ironic selfies yuccie, keytar beard lomo."
@@ -37,7 +37,7 @@ const reviewsData = [
   {
     company: "The Food Network",
     author: "- Rachael Ray",
-    photo: "/img/rachael-Ray.jpg",
+    photo: "rachael-Ray.jpg",
     credits: "The Rachael Ray Show, 30 Minute Meals, Rachael vs. Guy: Celebrity Cook-Off",
     highlight: "Fine dining with a healthy dose of southern hospitality!",
     review: "Hammock shabby chic distillery schlitz, blog venmo retro brooklyn tousled gochujang air plant food truck. Kombucha hammock post-ironic selfies yuccie, keytar beard lomo."
@@ -45,7 +45,7 @@ const reviewsData = [
   {
     company: "ABC",
     author: "- Chef Marcus Samuelsson",
-    photo: "/img/marcus-samuelsson.jpg",
+    photo: "marcus-samuelsson.jpg",
     credits: "The Taste, Chopped, Iron Chef America",
     highlight: "This place is where cuisine and culture collide!",
     review: "Hammock shabby chic distillery schlitz, blog venmo retro brooklyn tousled gochujang air plant food truck. Kombucha hammock post-ironic selfies yuccie, keytar beard lomo."
@@ -53,7 +53,7 @@ const reviewsData = [
   {
     company: "Viceland",
     author: "- Cat Cora",
-    photo: "/img/cat-cora.jpg",
+    photo: "cat-cora.jpg",
     credits: "Iron Chef USA, Cat Cora Enterprises",
     highlight: "One of the best steakhouses in the South!",
     review: "Hammock shabby chic distillery schlitz, blog venmo retro brooklyn tousled gochujang air plant food truck. Kombucha hammock post-ironic selfies yuccie, keytar beard lomo."
@@ -61,7 +61,7 @@ const reviewsData = [
   {
     company: "TV Guide Channel",
     author: "- Jamie Oliver",
-    photo: "/img/jamie-oliver.jpg",
+    photo: "jamie-oliver.jpg",
     credits: "Jamie's 15 Minute Meals, Save With Jamie, Jamie Does...",
     highlight: "Best steak experience in North Carolina!",
     review: "Hammock shabby chic distillery schlitz, blog venmo retro brooklyn tousled gochujang air plant food truck. Kombucha hammock post-ironic selfies yuccie, keytar beard lomo."

@@ -16,11 +16,22 @@ export default function Reviews({state, actions}) {
   const loopReviewImages = () => {
     return (
       <div>
-        <img class="chef-img" src={state.reviewsData[state.reviewStatus.currentReview].photo}/>
+        <img class="chef-img" src={`/img/${state.reviewsData[state.reviewStatus.currentReview].photo}`}/>
       </div>
     )
   }
 
+  const leftClickBtn = () => {
+    if(state.reviewStatus.currentReview > 0){
+      actions.reviewLeftClicked()
+    }
+  }
+
+const rightClickBtn = () => {
+  if(state.reviewStatus.currentReview < (state.reviewsData.length - 1)){
+    actions.reviewRightClicked()
+  }
+}
 
   return (
     <section id="Reviews">
@@ -34,8 +45,13 @@ export default function Reviews({state, actions}) {
 
             {loopReviews()}
             <div class="arrows">
-              <i class="fa fa-arrow-left" aria-hidden="true"></i>
-              <i class="fa fa-arrow-right ready" aria-hidden="true"></i>
+              <i onclick={leftClickBtn}
+                class={`fa fa-arrow-left ${(state.reviewStatus.currentReview > 0) ?
+                  'ready' : ''}`} aria-hidden="true"></i>
+                <i onclick={rightClickBtn}
+                  class={`fa fa-arrow-right ${(state.reviewStatus.currentReview <
+                  (state.reviewsData.length -1)) ? 'ready' : ''}`} aria-hidden="true">
+                </i>
             </div>
           </div>
 

@@ -15,9 +15,6 @@ app({
       console.log("Name:", name)
       console.log("Data:", data)
       console.groupEnd()
-    },
-    load(state, actions) {
-      actions.intro()
     }
   },
   mixins: [devtools()]
