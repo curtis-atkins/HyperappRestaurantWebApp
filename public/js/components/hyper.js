@@ -103,8 +103,6 @@ function App(_ref) {
     (0, _hyperapp.h)(_Footer2.default, { state: state, actions: actions })
   );
 }
-// <Header state={state} actions={actions}/>
-// <Button state={state} actions={actions}/>
 
 /***/ }),
 /* 11 */
@@ -327,8 +325,6 @@ function ContactUs(_ref) {
     )
   );
 }
-// <Header state={state} actions={actions}/>
-// <Button state={state} actions={actions}/>
 
 /***/ }),
 /* 14 */
@@ -482,8 +478,6 @@ function Footer(_ref) {
     )
   );
 }
-// <Header state={state} actions={actions}/>
-// <Button state={state} actions={actions}/>
 
 /***/ }),
 /* 15 */
@@ -559,8 +553,6 @@ function Header(_ref) {
     )
   );
 }
-// <Header state={state} actions={actions}/>
-// <Button state={state} actions={actions}/>
 
 /***/ }),
 /* 16 */
@@ -632,8 +624,6 @@ function OurStory(_ref) {
     )
   );
 }
-// <Header state={state} actions={actions}/>
-// <Button state={state} actions={actions}/>
 
 /***/ }),
 /* 17 */
@@ -672,8 +662,6 @@ function RandomQuote(_ref) {
     )
   );
 }
-// <Header state={state} actions={actions}/>
-// <Button state={state} actions={actions}/>
 
 /***/ }),
 /* 18 */
@@ -761,6 +749,11 @@ function Reviews(_ref) {
         "div",
         { "class": "row" },
         (0, _hyperapp.h)(
+          "h5",
+          { "class": "comp-title" },
+          "REVIEWS"
+        ),
+        (0, _hyperapp.h)(
           "div",
           { "class": "col-md-8" },
           loopReviewImages()
@@ -768,11 +761,6 @@ function Reviews(_ref) {
         (0, _hyperapp.h)(
           "div",
           { "class": "col-md-4" },
-          (0, _hyperapp.h)(
-            "h5",
-            { "class": "comp-title" },
-            "REVIEWS"
-          ),
           loopReviews(),
           (0, _hyperapp.h)(
             "div",
@@ -787,8 +775,6 @@ function Reviews(_ref) {
     )
   );
 }
-// <Header state={state} actions={actions}/>
-// <Button state={state} actions={actions}/>
 
 /***/ }),
 /* 19 */
@@ -877,8 +863,6 @@ function SpecialMenu(_ref) {
     )
   );
 }
-// <Header state={state} actions={actions}/>
-// <Button state={state} actions={actions}/>
 
 /***/ }),
 /* 20 */
@@ -973,8 +957,6 @@ function TopImage(_ref) {
     )
   );
 }
-// <Header state={state} actions={actions}/>
-// <Button state={state} actions={actions}/>
 
 /***/ }),
 /* 21 */

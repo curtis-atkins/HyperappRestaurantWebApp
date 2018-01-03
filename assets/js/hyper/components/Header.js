@@ -19,11 +19,5 @@ export default function Header({state, actions}) {
         </div>
       </div>
     </header>
-
-
-
-
   )
 }
-// <Header state={state} actions={actions}/>
-// <Button state={state} actions={actions}/>

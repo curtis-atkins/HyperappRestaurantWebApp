@@ -8,7 +8,6 @@ const reviewLeftClicked =  function (state, actions) {
   )
 }
 
-
 const reviewRightClicked = function (state, actions) {
   return (
     {

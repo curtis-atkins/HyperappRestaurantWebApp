@@ -2,19 +2,16 @@
 #SpecialMenu {
   padding: 100px 0;
   margin: 30px 50px;
-  background: rgba(0,0,0,0.26);
   overflow: hidden;
   height: 100%;
   z-index: 2;
-  // background: $greyBG;
-  // background-image: url(/img/GreyTexture.jpg);
-  // background-position: center;
-  // background-size: cover;
+  background-image: url(/img/GreyTexture.jpg);
+  background-position: center;
+  background-size: cover;
   margin: 0 auto;
   h2,h5 {
     text-align: center;
   }
-
   a.view-menu {
     font-family: $displayFont;
     font-size: 1.5rem;
@@ -30,7 +27,6 @@
   }
   .box {
     height: 380px;
-    width: 350px;
     padding: 20px;
     margin: 15px;
     background: white;
@@ -41,12 +37,6 @@
       background-image: url("/img/SteaknEggs.jpg");
       position: relative;
       margin-bottom: 70px;
-      // img{
-      //   height: 200px;
-      //   width: 100%;
-      //   display: flex;
-      //   align-items: center;
-      //   justify-content: center;
     }
     .price {
       position: absolute;
@@ -78,10 +68,8 @@
       font-size: .8rem;
       line-height: 2;
     }
-
     .boxes {
       padding: 50px;
     }
-
   }
 }

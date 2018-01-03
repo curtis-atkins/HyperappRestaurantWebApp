@@ -10,5 +10,3 @@ export default function RandomQuote({state, actions}) {
     </section>
   )
 }
-// <Header state={state} actions={actions}/>
-// <Button state={state} actions={actions}/>

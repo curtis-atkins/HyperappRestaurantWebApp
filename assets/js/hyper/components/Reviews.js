@@ -37,12 +37,11 @@ const rightClickBtn = () => {
     <section id="Reviews">
       <div class="container">
         <div class="row">
+          <h5 class="comp-title">REVIEWS</h5>
           <div class="col-md-8">
             {loopReviewImages()}
           </div>
           <div class= "col-md-4">
-            <h5 class="comp-title">REVIEWS</h5>
-
             {loopReviews()}
             <div class="arrows">
               <i onclick={leftClickBtn}
@@ -54,11 +53,8 @@ const rightClickBtn = () => {
                 </i>
             </div>
           </div>
-
         </div>
       </div>
     </section>
   )
 }
-// <Header state={state} actions={actions}/>
-// <Button state={state} actions={actions}/>

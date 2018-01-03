@@ -91,8 +91,6 @@ const randomQuoteData = [
   }
 ]
 
-
-
 export const globalState = {
   count: 0,
   companyInfoData,

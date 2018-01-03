@@ -60,5 +60,3 @@ export default function Footer({state, actions}) {
     </footer>
   )
 }
-// <Header state={state} actions={actions}/>
-// <Button state={state} actions={actions}/>

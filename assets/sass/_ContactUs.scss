@@ -1,13 +1,10 @@
-
 #ContactUs {
   padding: 100px 0;
   background-color: $greyBG;
-
   h2,
   h5 {
     text-align: center;
   }
-
   .box{
     background: white;
     padding: 70px;
@@ -26,7 +23,6 @@
       font-size: 1rem;
       color: $red;
       margin-bottom: 20px;
-
       strong {
         color: $black;
         font-weight: 400;

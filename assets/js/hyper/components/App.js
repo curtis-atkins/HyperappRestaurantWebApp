@@ -8,7 +8,6 @@ import Reviews from "./Reviews.js";
 import ContactUs from "./ContactUs.js";
 import Footer from "./Footer.js";
 
-
 export default function App({state, actions}) {
   return (
     <div class={'app'}>
@@ -23,5 +22,3 @@ export default function App({state, actions}) {
     </div>
   )
 }
-// <Header state={state} actions={actions}/>
-// <Button state={state} actions={actions}/>

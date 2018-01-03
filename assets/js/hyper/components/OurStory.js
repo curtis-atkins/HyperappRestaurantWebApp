@@ -23,5 +23,3 @@ export default function OurStory({state, actions}) {
     </section>
   )
 }
-// <Header state={state} actions={actions}/>
-// <Button state={state} actions={actions}/>

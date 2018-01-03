@@ -22,7 +22,6 @@ const loopSpecialMenu = () => {
   })
 }
 
-
   return (
     <section id="SpecialMenu" class="textureBG">
       <div class="container">
@@ -36,5 +35,3 @@ const loopSpecialMenu = () => {
     </section>
   )
 }
-// <Header state={state} actions={actions}/>
-// <Button state={state} actions={actions}/>
