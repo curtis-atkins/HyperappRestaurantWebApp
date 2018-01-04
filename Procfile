@@ -1,1 +1,1 @@
-web: /assets/js/hyper/index.js
+web: npm run watch
