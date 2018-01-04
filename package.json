@@ -1,10 +1,9 @@
 {
   "name": "HyperappRestaurantWebApp",
   "version": "1.0.0",
-  "description": "cool and fast way to run hyperapp",
+  "description": "Mock Steakhouse Restaurant using Hyperapp library",
   "main": "gulpfile.js",
   "dependencies": {
-    "axios": "^0.16.1",
     "babel-core": "^6.24.1",
     "babel-loader": "^6.4.1",
     "babel-plugin-transform-react-jsx": "^6.24.1",
@@ -32,6 +31,8 @@
     "webpack-stream": "^3.2.0"
   },
   "scripts": {
+    "start":"npm run watch",
+    "server": "./public/index.html",
     "bundle": "./node_modules/.bin/webpack",
     "production": "./node_modules/.bin/webpack -p",
     "watch": "gulp",
@@ -48,10 +49,6 @@
   "keywords": [
     "hyperapp"
   ],
-  "author": "joe santos garcia",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/codingphasedotcom/hyperapp-starterkit/issues"
-  },
-  "homepage": "https://github.com/codingphasedotcom/hyperapp-starterkit#readme"
-}
+  "author": "Curtis Atkins",
+  "license": "ISC"
+  }
