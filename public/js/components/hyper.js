@@ -355,7 +355,7 @@ function Footer(_ref) {
         { "class": "footer-menu" },
         (0, _hyperapp.h)(
           "a",
-          { href: "#" },
+          { href: "#Home" },
           "Home"
         ),
         (0, _hyperapp.h)(
@@ -365,7 +365,7 @@ function Footer(_ref) {
         ),
         (0, _hyperapp.h)(
           "a",
-          { href: "#" },
+          { href: "#OurStory" },
           "Our Story  "
         ),
         (0, _hyperapp.h)(
@@ -375,7 +375,7 @@ function Footer(_ref) {
         ),
         (0, _hyperapp.h)(
           "a",
-          { href: "#" },
+          { href: "#SpecialMenu" },
           "Special Menu"
         ),
         (0, _hyperapp.h)(
@@ -385,8 +385,8 @@ function Footer(_ref) {
         ),
         (0, _hyperapp.h)(
           "a",
-          { href: "#" },
-          "Review"
+          { href: "#Reviews" },
+          "Reviews"
         ),
         (0, _hyperapp.h)(
           "p",
@@ -395,7 +395,7 @@ function Footer(_ref) {
         ),
         (0, _hyperapp.h)(
           "a",
-          { href: "#" },
+          { href: "#Reservations" },
           "Reservations"
         ),
         (0, _hyperapp.h)(
@@ -405,7 +405,7 @@ function Footer(_ref) {
         ),
         (0, _hyperapp.h)(
           "a",
-          { href: "#" },
+          { href: "#ContactUs" },
           "Contact Us"
         )
       ),
@@ -520,32 +520,32 @@ function Header(_ref) {
           null,
           (0, _hyperapp.h)(
             "a",
-            { href: "#" },
+            { href: "#Home" },
             "Home"
           ),
           (0, _hyperapp.h)(
             "a",
-            { href: "#" },
+            { href: "#OurStory" },
             "Our Story"
           ),
           (0, _hyperapp.h)(
             "a",
-            { href: "#" },
+            { href: "#SpecialMenu" },
             "Special Menu"
           ),
           (0, _hyperapp.h)(
             "a",
-            { href: "#" },
-            "Review"
+            { href: "#Reviews" },
+            "Reviews"
           ),
           (0, _hyperapp.h)(
             "a",
-            { href: "#" },
+            { href: "#Reservations" },
             "Reservations"
           ),
           (0, _hyperapp.h)(
             "a",
-            { href: "#" },
+            { href: "#ContactUs" },
             "Contact Us"
           )
         )

@@ -5,17 +5,17 @@ export default function Footer({state, actions}) {
     <footer id="Footer">
       <div class="container">
         <nav class="footer-menu">
-          <a href="#">Home</a>
+          <a href="#Home">Home</a>
           <p>|</p>
-          <a href="#">Our Story  </a>
+          <a href="#OurStory">Our Story  </a>
           <p>|</p>
-          <a href="#">Special Menu</a>
+          <a href="#SpecialMenu">Special Menu</a>
           <p>|</p>
-          <a href="#">Review</a>
+          <a href="#Reviews">Reviews</a>
           <p>|</p>
-          <a href="#">Reservations</a>
+          <a href="#Reservations">Reservations</a>
           <p>|</p>
-          <a href="#">Contact Us</a>
+          <a href="#ContactUs">Contact Us</a>
         </nav>
 
         <ul class="social-media">

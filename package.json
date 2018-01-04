@@ -33,6 +33,7 @@
   "scripts": {
     "start":"npm run watch",
     "server": "./public/index.html",
+    "homepage": "https://github.com/curtis-atkins/HyperappRestaurantWebApp",
     "bundle": "./node_modules/.bin/webpack",
     "production": "./node_modules/.bin/webpack -p",
     "watch": "gulp",

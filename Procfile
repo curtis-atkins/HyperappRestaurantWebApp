@@ -1,1 +1,1 @@
-web: node gulpfile.js
+web: /assets/js/hyper/index.js
