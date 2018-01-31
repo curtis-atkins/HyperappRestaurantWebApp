@@ -1,5 +1,5 @@
 {
-  "name": "HyperappRestaurantWebApp",
+  "name": "hyper-restaurant",
   "version": "1.0.0",
   "description": "Mock Steakhouse Restaurant using Hyperapp library",
   "main": "gulpfile.js",

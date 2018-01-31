@@ -150,7 +150,7 @@
 /******/ 	__webpack_require__.oe = function(err) { console.error(err); throw err; };
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 39);
+/******/ 	return __webpack_require__(__webpack_require__.s = 40);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -491,6 +491,7 @@ function compose() {
 /* harmony export (immutable) */ __webpack_exports__["a"] = createStore;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash_es_isPlainObject__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_symbol_observable__ = __webpack_require__(36);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_symbol_observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_symbol_observable__);
 
 
 
@@ -722,7 +723,7 @@ var ActionTypes = {
         var unsubscribe = outerSubscribe(observeState);
         return { unsubscribe: unsubscribe };
       }
-    }, _ref[__WEBPACK_IMPORTED_MODULE_1_symbol_observable__["a" /* default */]] = function () {
+    }, _ref[__WEBPACK_IMPORTED_MODULE_1_symbol_observable___default.a] = function () {
       return this;
     }, _ref;
   }
@@ -737,7 +738,7 @@ var ActionTypes = {
     subscribe: subscribe,
     getState: getState,
     replaceReducer: replaceReducer
-  }, _ref2[__WEBPACK_IMPORTED_MODULE_1_symbol_observable__["a" /* default */]] = observable, _ref2;
+  }, _ref2[__WEBPACK_IMPORTED_MODULE_1_symbol_observable___default.a] = observable, _ref2;
 }
 
 /***/ }),
@@ -842,78 +843,71 @@ module.exports = g;
 var { createStore } = __webpack_require__(6);
 var { composeWithDevTools } = __webpack_require__(32);
 
-function reduxReducer(state = {}, action) {
-  return Object.assign({}, state, action.payload);
-}
+module.exports = function devtools(options) {
+  if (!options) options = {};
 
-function reducAction(name, data) {
-  return {
-    type: name,
-    payload: data
-  };
-}
-
-function copy(target, source) {
-  var obj = {}
-  for (var i in target) obj[i] = target[i]
-  for (var i in source) obj[i] = source[i]
-  return obj
-}
-
-function set(path, value, source, target) {
-  if (path.length) {
-    target[path[0]] =
-      1 < path.length ? set(path.slice(1), value, source[path[0]], {}) : value
-    return copy(source, target)
+  function reducer(state = {}, action) {
+    return Object.assign({}, state, action.payload);
   }
-  return value
-}
 
-module.exports = function devtools(app) {
-  var composeEnhancers = composeWithDevTools({ action: reducAction });
-  var store;
+  function action(name, data) {
+    return {
+      type: name,
+      payload: data
+    };
+  }
 
-  return function(state, actions, view, container) {
-    var appActions;
+  return function(app) {
+    var composeEnhancers = composeWithDevTools({ action: action });
 
-    function wire(path, actions) {
-      for (var key in actions) {
-        if (typeof actions[key] === "function") {
-          (function(key, action) {
-            actions[key] = function() {
-              var reducer = action.apply(this, arguments);
-              return function (slice) {
-                var data = typeof reducer === "function" ? reducer(slice, appActions) : reducer;
-                if (data && !data.then) {
-                  state = set(path, copy(slice, data), state, {});
-                  store.dispatch(reducAction(key, state));
-                }
-                return data;
-              };
-            };
-          })(key, actions[key]);
-        } else {
-          wire(path.concat(key), (actions[key] = copy(actions[key])));
+    var store;
+    var firedActions = [];
+
+    var mixin = {
+      actions: {
+        replaceState: function(state) {
+          return store.getState();
+        }
+      },
+      events: {
+        load: function(state, actions, root) {
+          store = createStore(reducer, state, composeEnhancers());
+          store.subscribe(function() {
+            actions.replaceState(state);
+          });
+        },
+        action: function(state, actions, info) {
+          if (info.name !== "replaceState") {
+            firedActions.push(info.name);
+          }
+        },
+        resolve(state, actions, result) {
+          if (typeof result === "function") {
+            const action = firedActions.pop()
+            return update => {
+              result(updateResult => {
+                firedActions.push(action)
+                update(updateResult)
+              })
+            }
+          }
+          return result;
+        },
+        update: function(state, actions, data) {
+          if (firedActions.length > 0 && store !== undefined) {
+            var action = firedActions.pop();
+            if (action !== "replaceState") {
+              store.dispatch({ type: action, payload: data });
+            }
+          }
+          return data;
         }
       }
-    }
-    wire([], (actions = copy(actions)));
-
-    actions.replaceState = function(actualState) {
-      return function (state) {
-        return actualState;
-      }
     };
-    store = createStore(reduxReducer, state, composeEnhancers());
-    store.subscribe(function() {
-      appActions.replaceState(store.getState());
-    });
 
-    appActions = app(state, actions, view, container);
-    return appActions;
+    return mixin;
   };
 };
-
 
 
 /***/ }),
@@ -1751,14 +1745,30 @@ function combineReducers(reducers) {
 
 /***/ }),
 /* 36 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(37);
+
+
+/***/ }),
+/* 37 */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(global, module) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ponyfill_js__ = __webpack_require__(37);
-/* global window */
+/* WEBPACK VAR INJECTION */(function(global, module) {
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 
-var root;
+var _ponyfill = __webpack_require__(38);
+
+var _ponyfill2 = _interopRequireDefault(_ponyfill);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+var root; /* global window */
+
 
 if (typeof self !== 'undefined') {
   root = self;
@@ -1772,27 +1782,31 @@ if (typeof self !== 'undefined') {
   root = Function('return this')();
 }
 
-var result = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__ponyfill_js__["a" /* default */])(root);
-/* harmony default export */ __webpack_exports__["a"] = (result);
-
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(8), __webpack_require__(38)(module)))
+var result = (0, _ponyfill2['default'])(root);
+exports['default'] = result;
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8), __webpack_require__(39)(module)))
 
 /***/ }),
-/* 37 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/* 38 */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = symbolObservablePonyfill;
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+exports['default'] = symbolObservablePonyfill;
 function symbolObservablePonyfill(root) {
 	var result;
-	var Symbol = root.Symbol;
+	var _Symbol = root.Symbol;
 
-	if (typeof Symbol === 'function') {
-		if (Symbol.observable) {
-			result = Symbol.observable;
+	if (typeof _Symbol === 'function') {
+		if (_Symbol.observable) {
+			result = _Symbol.observable;
 		} else {
-			result = Symbol('observable');
-			Symbol.observable = result;
+			result = _Symbol('observable');
+			_Symbol.observable = result;
 		}
 	} else {
 		result = '@@observable';
@@ -1801,14 +1815,14 @@ function symbolObservablePonyfill(root) {
 	return result;
 };
 
-
 /***/ }),
-/* 38 */
+/* 39 */
 /***/ (function(module, exports) {
 
-module.exports = function(originalModule) {
-	if(!originalModule.webpackPolyfill) {
-		var module = Object.create(originalModule);
+module.exports = function(module) {
+	if(!module.webpackPolyfill) {
+		module.deprecate = function() {};
+		module.paths = [];
 		// module.parent = undefined by default
 		if(!module.children) module.children = [];
 		Object.defineProperty(module, "loaded", {
@@ -1823,9 +1837,6 @@ module.exports = function(originalModule) {
 				return module.i;
 			}
 		});
-		Object.defineProperty(module, "exports", {
-			enumerable: true,
-		});
 		module.webpackPolyfill = 1;
 	}
 	return module;
@@ -1833,7 +1844,7 @@ module.exports = function(originalModule) {
 
 
 /***/ }),
-/* 39 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(0);
