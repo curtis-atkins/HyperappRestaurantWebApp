@@ -5,7 +5,7 @@ export default function Footer({state, actions}) {
     <footer id="Footer">
       <div class="container">
         <nav class="footer-menu">
-          <a href="#Header">Home</a>
+          <a href="#Home" id="Home">Home</a>
           <p>|</p>
           <a href="#OurStory">Our Story  </a>
           <p>|</p>
