@@ -6,7 +6,7 @@ export default function RandomQuote({state, actions}) {
       <div class="container">
         <h1>A well cooked steak is LOVE made visible</h1>
         <span class="author">- Tiffany Derry, Co-Host on Spike's Hungry Investors</span>
-    </div>
+      </div>
     </section>
   )
 }
