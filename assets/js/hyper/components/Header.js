@@ -7,7 +7,7 @@ export default function Header({state, actions}) {
         <div class="logo">
           <h1>Prime Beef</h1>
         </div>
-        <div class="nav-menu" id="Home">
+        <div class="nav-menu" id="Header">
           <nav>
             <a href="#Header">Home</a>
             <a href="#OurStory">Our Story</a>
