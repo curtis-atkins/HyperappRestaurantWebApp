@@ -355,7 +355,7 @@ function Footer(_ref) {
         { "class": "footer-menu" },
         (0, _hyperapp.h)(
           "a",
-          { href: "#Home" },
+          { href: "#Header" },
           "Home"
         ),
         (0, _hyperapp.h)(
@@ -520,7 +520,7 @@ function Header(_ref) {
           null,
           (0, _hyperapp.h)(
             "a",
-            { href: "#Home" },
+            { href: "#Header" },
             "Home"
           ),
           (0, _hyperapp.h)(
