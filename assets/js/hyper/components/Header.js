@@ -9,7 +9,7 @@ export default function Header({state, actions}) {
         </div>
         <div class="nav-menu" id="Home">
           <nav>
-            <a href="#">Home</a>
+            <a href="#Header">Home</a>
             <a href="#OurStory">Our Story</a>
             <a href="#SpecialMenu">Special Menu</a>
             <a href="#Reviews">Reviews</a>
