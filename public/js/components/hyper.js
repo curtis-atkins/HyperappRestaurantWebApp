@@ -147,7 +147,7 @@ var reviewsData = [{
 }, {
   company: "The Food Network",
   author: "- Rachael Ray",
-  photo: "rachael-Ray.jpg",
+  photo: "rachael-ray.jpg",
   credits: "The Rachael Ray Show, 30 Minute Meals, Rachael vs. Guy: Celebrity Cook-Off",
   highlight: "Fine dining with a healthy dose of southern hospitality!",
   review: "Hammock shabby chic distillery schlitz, blog venmo retro brooklyn tousled gochujang air plant food truck. Kombucha hammock post-ironic selfies yuccie, keytar beard lomo."
@@ -355,7 +355,7 @@ function Footer(_ref) {
         { "class": "footer-menu" },
         (0, _hyperapp.h)(
           "a",
-          { href: "#Home" },
+          { href: "#Header" },
           "Home"
         ),
         (0, _hyperapp.h)(
@@ -520,7 +520,7 @@ function Header(_ref) {
           null,
           (0, _hyperapp.h)(
             "a",
-            { href: "#Home" },
+            { href: "#Header" },
             "Home"
           ),
           (0, _hyperapp.h)(
