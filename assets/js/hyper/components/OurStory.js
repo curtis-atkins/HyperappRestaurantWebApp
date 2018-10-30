@@ -12,7 +12,7 @@ export default function OurStory({state, actions}) {
               truck. Kombucha hammock post-ironic selfies yuccie, keytar beard lomo.
             </p>
             <div class="quote"><strong>- Warrick Dunn</strong>, Master Chef at Prime Steak</div>
-          <a href="#" class="reserve-btn">RESERVE</a>
+          <a href="tel:+1919-555-8004" class="reserve-btn">RSVP NOW</a>
           </div>
           <div class="col-md-6">
             <div class="video-img">

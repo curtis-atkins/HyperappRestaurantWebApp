@@ -615,8 +615,8 @@ function OurStory(_ref) {
           ),
           (0, _hyperapp.h)(
             "a",
-            { href: "#", "class": "reserve-btn" },
-            "RESERVE"
+            { href: "tel:+1919-555-8004", "class": "reserve-btn" },
+            "RSVP NOW"
           )
         ),
         (0, _hyperapp.h)(
@@ -857,7 +857,7 @@ function SpecialMenu(_ref) {
       ),
       (0, _hyperapp.h)(
         "a",
-        { target: "_blank" /*onclick={src="/img/steakhouse-menu.png"}*/, "class": "view-menu" },
+        { target: "_blank", href: "http://www.hydeparkrestaurants.com/dtlunch.pdf", "class": "view-menu" },
         (0, _hyperapp.h)(
           "strong",
           null,
