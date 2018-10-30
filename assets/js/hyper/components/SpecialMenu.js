@@ -30,7 +30,7 @@ const loopSpecialMenu = () => {
         <div class="row boxes">
           {loopSpecialMenu()}
         </div>
-        <a target="_blank"  onclick={src="/img/steakhouse-menu.png"} class="view-menu"><strong>View Full Menu</strong></a>
+        <a target="_blank"  /*onclick={src="/img/steakhouse-menu.png"}*/ class="view-menu"><strong>View Full Menu</strong></a>
       </div>
     </section>
   )

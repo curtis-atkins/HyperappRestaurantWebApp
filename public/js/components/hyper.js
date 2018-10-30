@@ -498,55 +498,59 @@ function Header(_ref) {
       actions = _ref.actions;
 
   return (0, _hyperapp.h)(
-    "header",
-    null,
+    "section",
+    { id: "Header" },
     (0, _hyperapp.h)(
-      "div",
-      { "class": "container" },
+      "header",
+      null,
       (0, _hyperapp.h)(
         "div",
-        { "class": "logo" },
+        { "class": "container" },
         (0, _hyperapp.h)(
-          "h1",
-          null,
-          "Prime Beef"
-        )
-      ),
-      (0, _hyperapp.h)(
-        "div",
-        { "class": "nav-menu" },
+          "div",
+          { "class": "logo" },
+          (0, _hyperapp.h)(
+            "h1",
+            null,
+            "Prime Beef"
+          )
+        ),
         (0, _hyperapp.h)(
-          "nav",
-          null,
+          "div",
+          { "class": "nav-menu" },
           (0, _hyperapp.h)(
-            "a",
-            { href: "#Header" },
-            "Home"
-          ),
-          (0, _hyperapp.h)(
-            "a",
-            { href: "#OurStory" },
-            "Our Story"
-          ),
-          (0, _hyperapp.h)(
-            "a",
-            { href: "#SpecialMenu" },
-            "Special Menu"
-          ),
-          (0, _hyperapp.h)(
-            "a",
-            { href: "#Reviews" },
-            "Reviews"
-          ),
-          (0, _hyperapp.h)(
-            "a",
-            { href: "#Reservations" },
-            "Reservations"
-          ),
-          (0, _hyperapp.h)(
-            "a",
-            { href: "#ContactUs" },
-            "Contact Us"
+            "nav",
+            null,
+            (0, _hyperapp.h)(
+              "a",
+              { href: "#Header" },
+              "Home"
+            ),
+            (0, _hyperapp.h)(
+              "a",
+              { href: "#OurStory" },
+              "Our Story"
+            ),
+            (0, _hyperapp.h)(
+              "a",
+              { href: "#SpecialMenu" },
+              "Special Menu"
+            ),
+            (0, _hyperapp.h)(
+              "a",
+              { href: "#Reviews" },
+              "Reviews"
+            ),
+            (0, _hyperapp.h)(
+              "a",
+              { href: "#Reservations" },
+              "Reservations"
+            ),
+            (0, _hyperapp.h)(
+              "a",
+              { href: "#ContactUs" },
+              "Contact Us"
+            )
           )
         )
       )
@@ -853,7 +857,7 @@ function SpecialMenu(_ref) {
       ),
       (0, _hyperapp.h)(
         "a",
-        { href: "#", "class": "view-menu" },
+        { target: "_blank" /*onclick={src="/img/steakhouse-menu.png"}*/, "class": "view-menu" },
         (0, _hyperapp.h)(
           "strong",
           null,

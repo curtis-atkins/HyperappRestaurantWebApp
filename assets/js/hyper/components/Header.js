@@ -3,7 +3,7 @@ import {h, app} from 'hyperapp'
 export default function Header({state, actions}) {
   return (
     <section id="Header">
-      //<header>
+      <header>
         <div class="container">
           <div class="logo">
             <h1>Prime Beef</h1>
@@ -19,7 +19,7 @@ export default function Header({state, actions}) {
             </nav>
           </div>
         </div>
-      //</header>
+      </header>
     </section>
   )
 }
