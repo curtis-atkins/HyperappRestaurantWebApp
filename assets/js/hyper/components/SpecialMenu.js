@@ -4,7 +4,6 @@ export default function SpecialMenu({state, actions}) {
 
 const loopSpecialMenu = () => {
   return state.specialMenuData.map((item)=>{
-    console.log(item.title)
     return (
       <div class="col-md-4">
         <div class="box">

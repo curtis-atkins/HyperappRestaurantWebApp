@@ -125,15 +125,18 @@ var companyInfoData = {
 
 var specialMenuData = [{
   title: "Super BBQ Grill No Smoke",
+  image: "../../public/img/SteaknEggs.jpg",
   ingredients: "Steak, Fried Eggs, Baked Potatoes, Vegetable Medley",
   price: "$25"
 }, {
   title: "Queen Of Autumn",
+  image: "/img/SteaknEggs.jpg",
   ingredients: "Warm Chicken Wings, Portabello Mushrooms, Fresh Mozzarella",
   price: "$42"
 }, {
   title: "Royal Liver Fried",
-  ingredients: "Grilled Beef Steak, Roasted Red Potatoes and Bell Peppers with Rosemary, Mushrooms, Famous Sauce, Tomatoes",
+  image: "/img/SteaknEggs.jpg",
+  ingredients: "Grilled Beef Steak, Roasted Red Potatoes and Bell Peppers with Rosemary, Mushrooms, Famous Sauce",
   price: "$30"
 }];
 
@@ -801,7 +804,6 @@ function SpecialMenu(_ref) {
 
   var loopSpecialMenu = function loopSpecialMenu() {
     return state.specialMenuData.map(function (item) {
-      console.log(item.title);
       return (0, _hyperapp.h)(
         "div",
         { "class": "col-md-4" },
